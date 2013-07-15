@@ -195,6 +195,7 @@ $(function() {
 
     // Views
     var RepoView = Backbone.View.extend({
+        __name__: 'RepoView',
         el: '.content',
         events: {
             'click button#fetch': 'getInputText',
@@ -273,6 +274,7 @@ $(function() {
     });
 
     var MilestoneView = Backbone.View.extend({
+        __name__: 'MilestoneView',
         el: '.content',
         initialize: function() {
             _.bindAll(this, 'render', 'loadMilestone', 'renderChart');
