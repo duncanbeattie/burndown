@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require caliper.backbone-0.3.2.min
 //= require d3.v2
 //= require rickshaw
 //= require_tree .
