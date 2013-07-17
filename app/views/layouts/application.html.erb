@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <%= qbaka_init if Rails.env.production? %>
       <%= caliper_init if Rails.env.production? %>
       <title>AppNeta: Burndown before you burn out</title>
       <link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
