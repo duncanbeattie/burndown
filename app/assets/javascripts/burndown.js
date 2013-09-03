@@ -765,6 +765,7 @@ $(function() {
     });
 
     var SummaryView = Backbone.View.extend({
+        __name__: 'SummaryView',
         el: '.content',
         initialize: function() {
             _.bindAll(this, 'render', 'resetView', 'loadRepoIssues',
