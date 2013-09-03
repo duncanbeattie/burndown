@@ -539,6 +539,10 @@ $(function() {
             self.labels = new Labels();
             self.openIssues = new MilestoneOpenIssues();
             self.closedIssues = new MilestoneClosedIssues();
+
+            // Enable a responsive design by re-rendering the chart if the
+            // window resizes.
+            $(window).on('resize', this.renderChart);
         },
         render: function() {
             var self = this;
@@ -644,8 +648,8 @@ $(function() {
                 // Build graph!
                 var graph = new Rickshaw.Graph({
                     element: document.querySelector("#chart"),
-                    width: 900,
-                    height: 500,
+                    width: self.width,
+                    height: self.height,
                     renderer: 'line',
                     interpolation: 'basis',
                     series: [{
@@ -781,6 +785,10 @@ $(function() {
             // Filtered issue collections
             self.createdIssues = new SummaryOpenIssues();
             self.resolvedIssues = new SummaryClosedIssues();
+
+            // Enable a responsive design by re-rendering the chart if the
+            // window resizes.
+            $(window).on('resize', this.renderChart);
         },
         render: function() {
             var self = this;
@@ -887,8 +895,8 @@ $(function() {
                 // Build graph!
                 var graph = new Rickshaw.Graph({
                     element: document.querySelector("#chart"),
-                    width: 900,
-                    height: 500,
+                    width: self.width,
+                    height: self.height,
                     renderer: 'line',
                     stroke: true,
                     interpolation: 'basis',
