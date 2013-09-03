@@ -2,7 +2,11 @@ module ApplicationHelper
 
     def caliper_init
         if ENV.has_key?('BURNDOWN_CALIPER_ID')
-            javascript_tag "var Caliper = {config: {apiKey:'%s'}};" % [ENV['BURNDOWN_CALIPER_ID']]
+            config = "var Caliper = {config: {"
+            config += "apiKey: '%s'" % [ENV['BURNDOWN_CALIPER_ID']]
+            config += ", visitor: '%s'" % [current_user.name] if current_user
+            config += "}};"
+            javascript_tag config
         end
     end
 
