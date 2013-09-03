@@ -14,7 +14,7 @@
 //= require underscore
 //= require backbone
 //= require backbone.analytics
-//= require caliper.backbone-0.3.2.min
+//= require caliper.backbone-0.4.1.min
 //= require moment.min
 //= require d3.v2
 //= require rickshaw
