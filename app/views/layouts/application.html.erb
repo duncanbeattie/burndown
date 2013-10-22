@@ -5,8 +5,6 @@
       <%= stylesheet_link_tag "application", :media => "all" %>
       <%= favicon_link_tag %>
       <title>AppNeta: Burndown before you burn out</title>
-      <%= qbaka_init if Rails.env.production? %>
-      <%= caliper_init if Rails.env.production? %>
       <%= analytics_init if Rails.env.production? %>
       <%= csrf_meta_tags %>
     </head>
